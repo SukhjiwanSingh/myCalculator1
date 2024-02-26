@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+  <div class="container">
+    <div class="calc">
+      <div class="heading"><h1>My Calculator</h1></div>
+      <div>
+        <input type="text" id="ipText" readonly>
+      </div>
+      <div class="btn">
+        <button class="button" onclick="currValDisplay=''; document.querySelector('#ipText').value=currValDisplay;">C</button>
+        <button class="button" onclick="currValDisplay=currValDisplay+'/'; document.querySelector('#ipText').value=currValDisplay;">/</button>
+        <button class="button" onclick="currValDisplay=currValDisplay+'*'; document.querySelector('#ipText').value=currValDisplay;">*</button>
+        <button class="button" onclick="currValDisplay=currValDisplay+'-'; document.querySelector('#ipText').value=currValDisplay;">-</button>
+        <button class="button" onclick="currValDisplay=currValDisplay+'7'; document.querySelector('#ipText').value=currValDisplay;">7</button>
+        <button class="button" onclick="currValDisplay=currValDisplay+'8'; document.querySelector('#ipText').value=currValDisplay;">8</button>
+        <button class="button" onclick="currValDisplay=currValDisplay+'9'; document.querySelector('#ipText').value=currValDisplay;">9</button>
+        <button class="button pluss" onclick="currValDisplay=currValDisplay+'+'; document.querySelector('#ipText').value=currValDisplay;">+</button>
+        <button class="button" onclick="currValDisplay=currValDisplay+'4'; document.querySelector('#ipText').value=currValDisplay;">4</button>
+        <button class="button" onclick="currValDisplay=currValDisplay+'5'; document.querySelector('#ipText').value=currValDisplay;">5</button>
+        <button class="button" onclick="currValDisplay=currValDisplay+'6'; document.querySelector('#ipText').value=currValDisplay;">6</button>
+        <button class="button" onclick="currValDisplay=currValDisplay+'1'; document.querySelector('#ipText').value = currValDisplay; ">1</button>
+        <button class="button" onclick="currValDisplay=currValDisplay+'2'; document.querySelector('#ipText').value = currValDisplay;">2</button>
+        <button class="button"  onclick="currValDisplay=currValDisplay+'3'; document.querySelector('#ipText').value = currValDisplay;">3</button>
+        <button class="button zero" onclick="currValDisplay=currValDisplay+'0'; document.querySelector('#ipText').value=currValDisplay;">0</button>
+        <button class="button" onclick="currValDisplay=currValDisplay+'.'; document.querySelector('#ipText').value=currValDisplay;">.</button>
+        <button class="button equalTo" onclick="currValDisplay=eval(currValDisplay); document.querySelector('#ipText').value=currValDisplay;">=</button>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    let currValDisplay=''; 
+    document.querySelector('#ipText').value = currValDisplay;
+  </script>
+</body>
+</html>
